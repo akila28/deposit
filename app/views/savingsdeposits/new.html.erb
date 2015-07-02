@@ -23,7 +23,7 @@
     <%= f.text_field :current_balance, :value =>"0.00" %><br /> <br />
 
     <%= f.label :opened_on, class: 'required' %>
-    <%= f.text_field :opened_on, :readonly => true, :value => @savingsdeposit.opened_on %><br /><br />
+    <%= f.text_field :opened_on,  :value => Time.now.strftime("%m/%d/%Y"), :readonly => true%><br /><br />
 
     <%= f.label :account_type %>
     <%= f.text_field :account_type %><br />
