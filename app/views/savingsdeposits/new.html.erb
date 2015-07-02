@@ -1,0 +1,33 @@
+<h1><span class="customer">New Savingsdeposit</span></h1>
+
+ <%= form_for @savingsdeposit do |f| %>
+   <% if @savingsdeposit.errors.any? %>
+      <h4>Customer not added</h4>
+        <ul>
+          <% @savingsdeposit.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+          <% end %>
+        </ul>
+ <% end %>
+
+<br /><br />
+
+    <%= f.hidden_field :customer_id, :id => "real_customer_id" %>
+    <%= f.label :customer_name %>
+    <%= autocomplete_field_tag 'throwaway_customer', '',
+          autocomplete_customer_first_name_savingsdeposits_path,
+          :size => 25, :id_element => '#real_customer_id' %> <br /> <br />
+ 
+    
+    <%= f.label :current_balance %>
+    <%= f.text_field :current_balance, :value =>"0.00" %><br /> <br />
+
+    <%= f.label :opened_on, class: 'required' %>
+    <%= f.text_field :opened_on, :readonly => true, :value => @savingsdeposit.opened_on %><br /><br />
+
+    <%= f.label :account_type %>
+    <%= f.text_field :account_type %><br />
+    <br /> <br />
+
+<fieldset class="form-actions"> <%= f.submit "open account", class: "btn btn-primary" %></field>
+<% end %></div>

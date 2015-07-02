@@ -1,0 +1,54 @@
+
+<h1>Savings Deposit</h1>
+<h3> New Transaction </h3>
+<%= form_for @savingsdeposittransaction do |f| %>
+<%= f.hidden_field :savingsdeposit_id , :value => params[:id] %>
+<% if @savingsdeposittransaction.errors.any? %>
+<h4>savingsdeposittransaction not added</h4>
+<ul>
+<% @savingsdeposittransaction.errors.full_messages.each do |error| %>
+<li><%= error %></li>
+<% end %>
+</ul>
+<% end %>
+
+
+
+	<%= f.label :transaction_date %>
+    <%= f.text_field :transaction_date, :value => Date.today, :readonly => true %>
+
+
+
+
+	<%= f.label :transaction_type %> <%= f.select(:transaction_type, options_for_select(['cash','bank','transfer'])) %>
+
+
+ <%= f.label :current_balance %>
+    <%= f.text_field :current_balance, :value => @savingsdeposittransaction.savingsdeposit.current_balance, :readonly => true %>
+   
+
+
+    <%= f.label :transaction_mode %>
+    <%= f.select(:transaction_mode, options_for_select([['Credit', 'Credit'], ['Debit', 'Debit']]))%>
+
+
+
+
+    <%= f.label :transaction_amount %><%= f.text_field :transaction_amount %>
+
+
+
+    <%= f.label :particulars %>
+    <%= f.text_field :particulars, :id => "particulars" %>
+
+
+
+
+	<%= f.label :comments %><%= f.text_area :comments, :id => "comments", :cols => 5, :rows => 3 %>
+
+
+     <fieldset class="form-actions"> <%= f.submit "Add Transaction", class: "btn btn-primary" %></field>
+    <% end %>
+  </div>
+</div>
+

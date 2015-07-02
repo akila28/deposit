@@ -1,0 +1,31 @@
+<br />
+<div>
+  
+<h1>Customer Folio Details</h1>
+
+<table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+    <tr>
+	
+      <th>Folio allocation date</th>
+        <th>Folio Number</th>
+        <th>No_of_shares</th>
+        <th>Customer Id</th>
+        <th>Details</th>
+     </tr>
+<% @folios.each do |folio| %>
+    <tr>
+      <td><%= folio.folio_allocation_date %></td>
+      <td><%= folio.folio_number %></td>
+      <td><%= folio.no_of_shares %></td>
+      <td><%= folio.customer_id %></td>
+      <td><%= link_to(folio_path(folio), :class => 'btn btn-small btn-info') do %>
+More info <i class="icon-info-sign icon-white"></i><% end %>
+</td>
+
+      </tr>
+  <% end %>
+</table>
+
+</div>
+
+  <a class="btn btn-info" href="/customers">Back</a>

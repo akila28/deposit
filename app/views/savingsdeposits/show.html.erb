@@ -1,0 +1,59 @@
+<h1><span class="customer">Savingsdeposit details</span></h1><br /><br />
+
+<div id="customer" align="right"> 
+ <%= link_to "Edit transaction", edit_savingsdeposit_path,class: "btn-primary btn" %>
+</div>
+
+<% if @savingsdeposit.status == 'approved' %>
+  <%= link_to "Add transaction", new_savingsdeposittransaction_path(:id=>@savingsdeposit.id),class: "btn-primary btn" %>
+<% end %>
+
+<h3><%= "#{@savingsdeposit.customer.first_name} #{@savingsdeposit.customer.last_name}               #{@savingsdeposit.customer.code}" %></h3>
+
+<table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+   <tr>
+      <th>opened on</th>
+      <th>status</th>
+      <th>Account type</th>
+      <th>current balance</th>
+   </tr>
+ 
+   <tr>
+      <td><%= @savingsdeposit.opened_on %></td>
+      <td><%= @savingsdeposit.status %></td> 
+      <td><%= @savingsdeposit.account_type %></td> 
+      <td><%= @savingsdeposit.current_balance %></td>
+   </tr>
+</table>
+<br />
+<h1><span class="customer">Transaction History</span></h1>
+</div>
+
+   <div id="customer" align="right"> 
+      <%= link_to 'Pending Transaction',savingsdeposittransactions_pending_path(@savingsdeposittransaction),class: "btn-primary btn"%><br /><br />
+   </div>
+
+<table cellpadding = "3px" cellspacing = "3px" width = "100%" class="table table-striped">
+   <tr>
+      <th>transaction date</th>
+      <th>transaction type</th>
+      <th>transaction mode</th>
+      <th>transaction amount</th>
+      <th>particulars</th>
+      <th>status</th>
+   </tr>
+
+   <% @savingsdeposit.savingsdeposittransactions.each do |f|%>
+
+   <tr>
+      <td><%= f.transaction_date %></td>
+      <td><%= f.transaction_type %></td>
+      <td><%= f.transaction_mode %></td>
+      <td><%= f.transaction_amount %></td>
+      <td><%= f.particulars %></td> 
+      <td><%= f.status %></td> 
+   </tr>
+  
+   <% end %>
+
+</table>

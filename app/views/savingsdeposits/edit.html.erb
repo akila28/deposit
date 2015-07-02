@@ -1,0 +1,28 @@
+<h4><span class="savingsdeposit">Edit Account  <h5><%= "#{@savingsdeposit.customer.first_name} #{@savingsdeposit.customer.last_name}               #{@savingsdeposit.customer.code}" %></h5>
+</span></h4>
+
+
+ <%= form_for @savingsdeposit do |f| %>
+
+ 
+    <% if @savingsdeposit.errors.any? %>
+  <h4>Customer not added</h4>
+  <ul>
+  <% @savingsdeposit.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+  </ul>
+ <% end %>
+ 
+ 
+ <%= f.label :current_balance %><div class="controls"><%= f.text_field :current_balance, :readonly => true %>
+ 
+<%= f.label :opened_on %></label>
+ <%= f.text_field :opened_on, :readonly => true, :value => @savingsdeposit.opened_on %>
+
+ <%= f.label :account_type %><div class="controls">
+ <%= f.text_field :account_type %>
+
+ <fieldset class="form-actions"> <%= f.submit "update account", class: "btn btn-primary" %></field>
+ <% end %></div>
+

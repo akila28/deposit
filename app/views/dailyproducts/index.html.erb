@@ -1,0 +1,22 @@
+<br />
+<h4>Daily product</h4>
+<table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+<tr>
+      <th>from date</th>
+      <th>to date</th>
+      <th>no of days</th>
+      <th>balance</th>
+      <th>rate of interest</th>
+      <th>interest</th>
+</tr>
+<% @dailyproducts.each do |dailyproduct|%>
+<tr>
+    <td><%= @dailyproduct.from_date %></td>
+    <td><%= @dailyproduct.to_date %></td>
+    <td><%= @dailyproduct.no_of_days %></td>
+    <td><%= @dailyproduct.balance %></td>
+    <td><%= @dailyproduct.rate_of_interest %></td> 
+    <td><%= @dailyproduct.interest %></td> 
+</tr>
+<% end %>
+</table>

@@ -1,0 +1,54 @@
+<br />
+<h1><%= link_to "Customers", customers_path %></h1>  
+<br />
+
+<div id="customer" align="right"> 
+   <div class="btn-group">
+
+    <a class="btn btn-primary" href="/customers">
+       <span class="glyphicon glyphicon-user"></span> List all Customers</a>
+
+    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+       <span class="caret"></span></a>
+       
+   <ul class="dropdown-menu">
+    <li><%= link_to(edit_customer_path(@customer)) do %>
+      Edit Current Customer <span class="glyphicon glyphicon-pencil"></span>
+    <% end %></li>
+  
+   </div>
+</div>
+
+   <h4><span class = "customer"><%= @customer.code %></span></h4>
+       <%= "#{@customer.first_name} #{@customer.last_name}" %>
+   <h5><%= "Age : #{Date.today.year - @customer.date_of_birth.year}" %></h5> 
+   <h5><%= @customer.address %></h5>
+
+ <hr>
+   <h4><span class="customer">APPLICATION DETAILS</span></h4>
+   <h5>Status : <%= @customer.status %> </h5>
+   <h5>Folio number: <% for folio in @customer.folios %><%= link_to folio.folio_number, folios_path %>   <% end %> </h5>
+   <h5>Number of shares: <% for folio in @customer.folios %>                                     <%= link_to folio.no_of_shares, folios_path %><% end %></h5>
+ </hr>
+
+ <hr>   
+   <h4><span class="customer">PHOTO</span></h4> 
+   <h5><%= image_tag @customer.photo, :size => "50x50", :crop => :fill %></h5>
+ </hr>
+
+ <hr>   
+   <h4><span class="customer">CUSTOMER DETAILS</span></h4>
+   <h5>Date of birth: <%= @customer.date_of_birth %></h5>
+   <h5>Gender: <%= @customer.sex %></h5>
+ </hr>
+
+ <hr>  
+   <h4><span class="customer">ID DETAILS</span></h4>
+   <h5>PAN: <%= @customer.PAN %> </div></h5>
+ </hr>
+
+<br></br>
+
+<div class = "span3 offset3">
+  <a class="btn btn-info btn-lg btn-block" href="/customers">Back</a>
+</div>

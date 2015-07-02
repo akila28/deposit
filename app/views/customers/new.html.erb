@@ -1,0 +1,73 @@
+<br />
+<h1>New customer</h1>
+
+
+ <%= form_for @customer, :html => {:multipart => true} do |f| %>
+  <% if @customer.errors.any? %>  
+  <ul>
+  <% @customer.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+  </ul>
+ <% end %>
+
+
+
+<h4><span class="customer">Customer details</span></h4>     
+
+<%= f.label :first_name ,class: 'required'%>
+<%= f.text_field :first_name %><br />
+
+<%= f.label :last_name ,class: 'required'%>
+<%= f.text_field :last_name %><br />
+
+<%= f.label :date_of_birth ,class: 'required' %>
+<%= f.text_field :date_of_birth %><br />
+
+<%= f.label :sex ,class: 'required' %> <br />
+<%= f.radio_button :sex, "male" %>
+    <%= f.label :sex, "male", :value => "male" %><br />
+     <%= f.radio_button :sex, "female" %>
+     <%= f.label :sex, "female", :value => "female" %><br />
+   
+<hr>
+<h4><span class="customer">Contact details</span></h4>
+ 
+<%= f.label :city, class: 'required' %>
+<%= f.text_field :city %><br />
+
+<%= f.label :state, class: 'required' %>
+<%= f.text_field :state %><br />
+
+<%= f.label :pincode, class: 'required' %>
+<%= f.text_field :pincode %><br />
+
+<%= f.label :address ,class: 'required' %>
+<%= f.text_field :address, :id => "address", :cols => 5, :rows => 3 %><br />
+</hr>
+
+<hr>
+ <h4><span class="customer">ID details</span></h4>
+     <%= f.label :PAN ,class: 'required'%>
+     <%= f.text_field :PAN %>
+</hr>
+
+<hr>
+<h4><span class="customer">Photo</span></h4>
+<%= f.label :Photo %>
+<%= f.file_field :photo %>
+</hr> 
+
+<hr>
+  <%= f.fields_for :folios do |f|%>
+  <h4><span class="customer">Share</span></h4>
+      <%= f.label :no_of_shares ,class: 'required'%>
+      <%= f.text_field :no_of_shares, :class => 'textbox', :value => '' %>
+  <% end %>
+</hr> 
+<br /><br />
+          
+<fieldset class="form-actions"> <%= f.submit "Create Customer", class: "btn btn-primary" %></field>
+<% end %>
+</div>
+</div>

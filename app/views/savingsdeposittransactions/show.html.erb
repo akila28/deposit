@@ -1,0 +1,27 @@
+<h1>Savingsdeposit Transaction<h1>
+<% if can? :approve,@savingsdeposittransaction %>
+<%= form_for @savingsdeposittransaction, url: activate_savingsdeposittransaction_path(@savingsdeposittransaction), :html => {:method => :put} do |f| %>
+<%= f.submit "approve", class: "btn-btn danger" %>
+<% end %><% end %>
+<h5><table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+<tr>
+      <th>savingsdeposit id</th>
+      <th>transaction date</th>
+      <th>transaction type</th>
+      <th>transaction mode</th>
+      <th>transaction amount</th>
+      <th>particulars</th>
+      <th>status</th>
+</tr>
+
+<tr>
+      <td><%= @savingsdeposittransaction.savingsdeposit_id %></td>
+    <td><%= @savingsdeposittransaction.transaction_date %></td>
+    <td><%= @savingsdeposittransaction.transaction_type %></td>
+    <td><%= @savingsdeposittransaction.transaction_mode %></td>
+    <td><%= @savingsdeposittransaction.transaction_amount %></td>
+    <td><%= @savingsdeposittransaction.particulars %></td> 
+    <td><%= @savingsdeposittransaction.status %></td> 
+</tr>
+
+</table></h5>

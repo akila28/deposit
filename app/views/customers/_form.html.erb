@@ -1,0 +1,53 @@
+<br />
+<div class="row">
+    <div class="span6 offset3">
+    <%= form_for(@customer) do |f| %>
+    <% if @customer.errors.any? %>
+    <h4>customer could not be added:</h4>
+    <ul> <% @customer.errors.full_messages.each do |error|%>
+    <li><%= error%></li>
+    <% end%>
+    </ul>
+<% end%>
+    
+
+     <%= f.label :first_name %>
+     <%= f.text_field :first_name %>
+
+     <%= f.label :last_name %>
+     <%= f.text_field :last_name %>
+ 
+     <%= f.label :photo %>
+     <%= f.file_field :photo %>
+     
+     <%= f.label :date_of_birth %>
+     <%= f.text_field :date_of_birth %>
+    
+     <%= f.label :sex %>
+     <%= f.radio_button :sex, "male" %>
+     <%= f.label :sex, "male", :value => "male" %>
+     <%= f.radio_button :sex, "female" %>
+     <%= f.label :sex, "female", :value => "female" %>
+     
+     <%= f.label :Address %>
+     <%= f.text_area :address, :id => "address", :cols =>3, :rows =>3 %>
+
+     <%= f.label :city %>
+     <%= f.text_field :city %>
+  
+     <%= f.label :state %>
+     <%= f.text_field :state %>
+
+     <%= f.label :pincode %>
+     <%= f.text_field :pincode %>
+ 
+     <%= f.label :PAN %>
+     <%= f.text_field :PAN %>
+
+     <!--<%= f.label :status %>
+     <%= submit_tag "pending", :type => 'button', :value => "pending" %>--> 
+
+   <br><br> <%= f.submit "submit", class: "btn btn-large btn-primary" %> </br></br>
+    <% end %>
+  </div>
+</div>

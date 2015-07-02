@@ -1,0 +1,39 @@
+<h1> Customers </h1>
+
+<%= form_tag customers_path, :method => 'get', :class => "form-search" do %>
+  <%= text_field_tag :search, nil, :placeholder => "name or code", 
+      :class => "input-medium search-query" %>
+  <%= submit_tag "Find!", :name => nil, :class => "btn btn-primary" %>
+  <%= link_to "New customer", new_customer_path,class: "btn btn-primary" %>
+<% end %>
+
+
+<h6 class= "alert alert-info"><%= page_entries_info @customers %></h6>
+
+<div> <table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+ 
+  <tr>
+    <th>FOLIO NUMBER</th>
+    <th>CODE</th>
+    <th>NAME</th>
+    <th>ADDRESS</th>
+    <th>PHOTO</th>
+    <th> E/D</th>
+  </tr>
+
+  <% @customers.each do |customer| %>
+
+    <tr>
+      <td><% for folio in customer.folios %><%= link_to folio.folio_number, folios_path %><% end %></td>
+      <td><%= link_to "#{customer.code}" , customer_path(customer)%></td>
+      <td><%= link_to "#{customer.first_name} #{customer.last_name}" , customer_path(customer)%>   <td><%= customer.address%></td>
+      <td><%= image_tag customer.photo, :size => "50x50" , class:"img-polaroid" %></td>
+      <td><%= link_to "Edit",edit_customer_path(customer),class: "btn btn-success" %>
+      <%= link_to "Delete",customer_path(customer),class: "btn btn-danger",
+      method: :delete, data: {confirm: "Are You Sure?"} %></td>
+   </tr>
+  <% end %>
+ </table>
+
+<%= will_paginate @customers %>
+</div>

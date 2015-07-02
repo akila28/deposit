@@ -1,0 +1,45 @@
+<br />
+<h1> <span class="customer">Savings deposit</span></h1>
+  <br />
+     <%= link_to "New savings deposits", new_savingsdeposit_path,class: "btn-primary btn" %>
+
+<div class="btn-group">
+      <a class="btn btn-primary">Transactions Pending</a>
+      <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+      <span class="caret"></span></a>
+       <ul class="dropdown-menu">
+    <% if current_user.role == "manager"%>
+        <li> <%= link_to 'Awaiting Approval',savingsdeposits_pending_path(@savingsdeposit)%></li>
+     <% end %>
+
+        </ul>
+   </div>
+     </div>
+   <br />
+<br>
+<table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>CURRENT BALANCE</th>
+    <th>OPENED ON</th>
+    <th>ACCOUNT TYPE</th>
+    <th>STATUS</th>
+    <th>DETAILS</th>
+
+ </tr>
+    <% @savingsdeposits.each do |savingsdeposit| %>
+      <tr>
+      <td><%= savingsdeposit.customer_id %></td>
+      <td><%= savingsdeposit.current_balance %></td>
+      <td><%= savingsdeposit.opened_on %></td>
+      <td><%= savingsdeposit.account_type %></td>
+      <td><span class="label label-success"><%= savingsdeposit.status %><%= @pending %>
+</span></td>
+      <td><%= link_to(savingsdeposit_path(savingsdeposit), :class => 'btn btn-small btn-info') do %>
+More info <i class="icon-info-sign icon-white"></i>
+                   <% end %>
+</td>
+      </tr>
+    <% end %>
+  </table>
+ </div>

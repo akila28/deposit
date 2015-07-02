@@ -1,0 +1,28 @@
+<br /> 
+
+   <div class="span6 customer_left_span_properties">
+   <h4><span class="customer">User details</span></h4><br /> 
+
+   <strong>USER NAME</strong> - <%= @user.username %>   
+   <br></br>
+
+   <strong>EMAIL-ID</strong>
+   - <%= @user.email %>
+   
+   <br></br>
+
+   <strong>MOBILE</strong>
+   - <%= @user.mobile_number %>
+   <br></br>
+
+   <strong>ADDRESS</strong>
+  - <%= @user.Address %> 
+   
+   <br></br>
+
+   <strong>LOGIN COUNT</strong>
+   - <%= @user.sign_in_count %> 
+   <br></br>
+
+<%= link_to "Edit",edit_user_registration_path,class: "btn btn-primary" %>
+<%= link_to "Back",home_index_path,class: "btn btn-primary" %>

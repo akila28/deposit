@@ -1,0 +1,32 @@
+<br />
+<h1> Pending records</h1>
+  <br />
+
+     <table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+  <tr>
+    <th>customer id</th>
+    <th>current balance</th>
+    <th>opened on</th>
+    <th>status</th>
+    <th>Account type</th>
+    <th>Details</th>
+
+ </tr>
+
+    <% @savingsdeposits.each do |savingsdeposit| %>
+
+<% if savingsdeposit.status == "Pending" %>
+      <tr>
+      <td><%= savingsdeposit.customer_id %></td>
+      <td><%= savingsdeposit.current_balance %></td>
+      <td><%= savingsdeposit.opened_on %></td>
+      <td><span class="label label-warning"><%= savingsdeposit.status %></span></td>
+      <td><%= link_to "#{savingsdeposit.account_type}", approve_savingsdeposit_path(savingsdeposit) %>
+      </td>
+      
+</tr>
+    <% end %> 
+<% end %> 
+ </table>
+
+  

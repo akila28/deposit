@@ -1,0 +1,21 @@
+<br /><h1> Pending Savingsdeposittransactions</h1><br />
+
+<table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table table-striped">
+<tr>
+      <th>savingsdeposit id</th>
+      <th>transaction type</th>
+      <th>transaction mode</th>
+      <th>transaction amount</th>
+      <th>status</th>
+</tr>
+<% @savingsdeposittransaction.each do |f|%>
+<tr>
+      <td><%= f.savingsdeposit_id %></td>
+    <td><%= f.transaction_type %></td>
+    <td><%=link_to"#{f.transaction_mode}", savingsdeposittransaction_path(f) %></td>
+    <td><%= f.transaction_amount %></td>
+    <td><%= f.status %></td> 
+</tr>
+<% end %>
+</table>
+
