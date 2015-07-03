@@ -4,13 +4,12 @@
 </style>
 
 
+<div class = "span3 offset3" align="center">
+  <h1 class="sign_up_header">Ruby Benefit Fund</h1> 
+</div>
+
 <div class="row">
 <div class="offset3 span6">
-  <h1 class="sign_up_header">Ruby Benefit Fund</h1> 
-  <h3 class="sign_up_label">sign up</h3>
-
-  <div id="sign_up">
-</div>
 <div class="border-form-div">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -23,7 +22,7 @@
   <%= f.text_field :mobile_number %></div>
 
   <div><%= f.label :Address %><br/>
-  <%= f.text_area :Address, :id => "Address", :cols => 5, :rows => 3 %></div>
+  <%= f.text_area :Address, :id => "Address", :cols => 22, :rows => 3 %></div>
       
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
@@ -36,11 +35,13 @@
 
   <div><%= f.label :role %><br />
   <%= f.select :role, options_for_select([["Manager", "manager"], ["Deo",  "deo"]]), { :include_blank => true } %>
- </div>
+ </div><br /><br />
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+  <div><%= f.submit "Sign up" ,class: "btn btn-primary" %></div>
+  <% end %>
+  </div>
+ </div>
 </div>
-</div>
-</div>
+
+Already registered user!! Sign in here..
 <%= render :partial => "devise/shared/links" %>
