@@ -1,7 +1,7 @@
-<h4><span class="savingsdeposit">Edit Account  <h5><%= "#{@savingsdeposit.customer.first_name} #{@savingsdeposit.customer.last_name}               #{@savingsdeposit.customer.code}" %></h5>
-</span></h4>
-
-
+<h2><span class="customer">Edit Account</span></h2><br />
+<h5><span class="customer"><%= "#{@savingsdeposit.customer.first_name} #{@savingsdeposit.customer.last_name}               #{@savingsdeposit.customer.code}" %></h5>
+</span>
+<br />
  <%= form_for @savingsdeposit do |f| %>
 
  
@@ -15,14 +15,14 @@
  <% end %>
  
  
- <%= f.label :current_balance %><div class="controls"><%= f.text_field :current_balance, :readonly => true %>
+ <%= f.label :current_balance %>
+ <%= f.text_field :current_balance, :readonly => true %><br />
  
-<%= f.label :opened_on %></label>
- <%= f.text_field :opened_on, :readonly => true, :value => @savingsdeposit.opened_on %>
+<%= f.label :opened_on %>
+ <%= f.text_field :opened_on, :readonly => true, :value => @savingsdeposit.opened_on %><br />
 
- <%= f.label :account_type %><div class="controls">
- <%= f.text_field :account_type %>
+ <%= f.label :account_type %> 
+ <%= f.text_field :account_type %><br /><br />
 
  <fieldset class="form-actions"> <%= f.submit "update account", class: "btn btn-primary" %></field>
  <% end %></div>
-

@@ -31,9 +31,9 @@
       <td><%= link_to "Edit",edit_customer_path(customer),class: "btn btn-success" %>
       <%= link_to "Delete",customer_path(customer),class: "btn btn-danger",
       method: :delete, data: {confirm: "Are You Sure?"} %></td>
-   </tr>
   <% end %>
- </table>
+ </tr>
+</table>
 
 <%= will_paginate @customers %>
 </div>

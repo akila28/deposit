@@ -2,11 +2,11 @@
 
 <div id="customer" align="right"> 
  <%= link_to "Edit transaction", edit_savingsdeposit_path,class: "btn-primary btn" %>
-</div>
 
 <% if @savingsdeposit.status == 'approved' %>
   <%= link_to "Add transaction", new_savingsdeposittransaction_path(:id=>@savingsdeposit.id),class: "btn-primary btn" %>
-<% end %>
+<% end %></div>
+
 
 <h3><%= "#{@savingsdeposit.customer.first_name} #{@savingsdeposit.customer.last_name}               #{@savingsdeposit.customer.code}" %></h3>
 

@@ -4,13 +4,8 @@
 </style>
 
 
-   <section id="flashMsg">
-<div class="alert alert-block alert-info"> <a class="close" data-dismiss="alert" href="#">X</a> <h4 class="alert-heading">Info!</h4>You need to sign in or sign up before continuing</div> 
-  </section>
-
-<div class="offset3 span6">
-  <h1 class="sign_up_header">Ruby Benefit Fund</h1> 
-  <h3 class="sign_up_label">sign up</h3>
+<div class = "span3 offset3" align="center">
+  <h1> Ruby Benefit Fund </h1> 
 </div>
 
 <div class="border-form-div">
@@ -40,7 +35,7 @@
   <%= f.select :role, options_for_select([["Manager", "manager"], ["Deo",  "deo"]]), { :include_blank => true } %>
  </div>
 
-  <div><%= f.submit "Sign up"  %></div>
+  <div><%= f.submit "Sign up" ,class: "btn btn-primary" %></div>
 <% end %>
 </div>
 </div>

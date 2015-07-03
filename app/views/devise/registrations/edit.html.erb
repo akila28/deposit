@@ -20,16 +20,17 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
 
-  <div><%= f.label :mobile_number %>
+  <div><%= f.label :mobile_number %> <i>(Valid number)</i><br />
   <%= f.text_field :mobile_number, :autofocus => true %></div>
 
   
-  <div><%= f.label :Address %>
-  <%= f.text_area :Address, :autofocus => true,:rows =>2 ,:cols =>2 %></div>
+  <div><%= f.label :Address %><br />
+  <%= f.text_area :Address, :autofocus => true,:rows =>2 ,:cols =>20 %></div><br />
 
-  <div><%= f.submit "Update" %></div>
+  <%= f.submit "Update",class: "btn btn-warning" %>
+ 
+  <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete ,class: "btn btn-warning"%><br />
+
 <% end %>
-
- <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
 
 <%= link_to "Back",home_show_path,class: "btn btn-primary" %>

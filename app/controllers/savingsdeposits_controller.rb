@@ -42,7 +42,7 @@ class SavingsdepositsController < ApplicationController
  def update
   @savingsdeposit = Savingsdeposit.find(params[:id])
     if @savingsdeposit.update_attributes(params[:savingsdeposit])
-       flash[:success].keep = "Profile updated successfully"
+       flash.keep[:success] = "Profile updated successfully"
        redirect_to savingsdeposits_path(@savingsdeposit)
     else
        flash.keep[:error] = "Cannot updating your profile"
