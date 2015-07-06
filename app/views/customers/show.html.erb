@@ -26,8 +26,11 @@
 
  <hr>
    <h4><span class="customer">APPLICATION DETAILS</span></h4>
-   <h5>Status : <%= @customer.status %> </h5>
+
+   <!--<h5>Status : <%= @customer.status %> </h5>-->
+
    <h5>Folio number: <% for folio in @customer.folios %><%= link_to folio.folio_number, folios_path %>   <% end %> </h5>
+
    <h5>Number of shares: <% for folio in @customer.folios %>                                     <%= link_to folio.no_of_shares, folios_path %><% end %></h5>
  </hr>
 

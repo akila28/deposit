@@ -17,7 +17,15 @@
 <%= f.text_field :transaction_date, :value => Date.today, :readonly => true %><br />
 
 <%= f.label :transaction_type %> 
-<%= f.select(:transaction_type, options_for_select(['cash','bank','transfer'])) %><br />
+<%= f.select(:transaction_type, options_for_select(['cash','bank'])) %><br />
+
+
+<% if @savingsdeposittransaction.transaction_type == 'bank' %>
+  <%= f.label :bank %> 
+<%= f.select(:transaction_type, options_for_select(['cub','icici'])) %><br />
+
+<% end %>
+
 
 <%= f.label :current_balance %>
 <%= f.text_field :current_balance, :value => @savingsdeposittransaction.savingsdeposit.current_balance, :readonly => true %><br />
@@ -28,11 +36,9 @@
 <%= f.label :transaction_amount %>
 <%= f.text_field :transaction_amount %><br />
 
-<%= f.label :particulars %>
-<%= f.text_field :particulars, :id => "particulars" %><br />
-
 <%= f.label :comments %>
-<%= f.text_area :comments, :id => "comments", :cols => 8, :rows => 1 %><br />
+<%= f.text_field :particulars, :id => "particulars" %><br />
+<br />
 <br />
 
 <fieldset class="form-actions"> 

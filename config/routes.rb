@@ -22,14 +22,15 @@ end
   get "folios/index"
   resources :folios
 
-  resources :savingsdeposittransactions do
+resources :savingsdeposittransactions do
    put :activate, :on => :member
   end
 
-  resources :dailyproducts
+resources :dailyproducts
   get "dailyproducts/show"
   
 devise_for :users, :controllers => { :registrations =>'registration'}
+
 resources :customers
 
 resources :home
@@ -38,4 +39,3 @@ resources :home
   
 root :to =>'home#index'
 end
-

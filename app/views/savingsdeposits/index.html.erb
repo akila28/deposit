@@ -35,7 +35,10 @@
       <td><%= savingsdeposit.account_type %></td>
       <td><span class="label label-success"><%= savingsdeposit.status %><%= @pending %>
 </span></td>
-      <td><%= link_to(savingsdeposit_path(savingsdeposit), :class => 'btn btn-small btn-info') do %>
+      <td> <% if current_user.role == "manager"%>
+        <li> <%= link_to 'Awaiting Approval',savingsdeposits_pending_path(@savingsdeposit)%></li>
+     <% end %>
+<%= link_to(savingsdeposit_path(savingsdeposit), :class => 'btn btn-small btn-info') do %>
 More info <i class="icon-info-sign icon-white"></i>
                    <% end %>
 </td>
