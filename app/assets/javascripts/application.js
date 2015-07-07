@@ -14,6 +14,6 @@
 //= require twitter/bootstrap
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-//= require autocomplete-rails
 //= require jquery-ui
+//= require autocomplete-rails
+//= require_tree .
