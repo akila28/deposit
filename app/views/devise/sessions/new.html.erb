@@ -13,11 +13,19 @@
 
   <%= f.label :EMAIL %>
   <%= f.email_field :email, :autofocus => true %>  
+<<<<<<< HEAD
 <br /> <br />
 
   <%= f.label :PASSWORD %>
   <%= f.password_field :password %>  
 <br /> <br />
+=======
+<br /><br /> 
+
+  <%= f.label :PASSWORD %>
+  <%= f.password_field :password %>  
+<br /><br /> 
+>>>>>>> 5e20299cebae6fb3fb65ac6d94a59cece4181b13
 
   <%= f.label :ROLE %>
   <%= f.select :role, options_for_select([["Manager", "manager"], ["Deo",  "deo"]]), { :include_blank => true } %>  
@@ -27,6 +35,7 @@
     <%= f.check_box :remember_me %> <%= f.label :remember_me %>
   <% end -%><br />
 
+<br /><br />
   <fieldset class="form-actions">
     <button class="btn btn-info" type="submit" name="button">Sign in</button>
    </fieldset>
@@ -34,7 +43,7 @@
 
 </div>
 </div>
-
+<br />
 <div align ="center">
 Didn't have account!! 
 Click here to create one <%= link_to "Sign up", new_user_registration_path, :method => :get %>

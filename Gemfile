@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 #ruby '2.0'
-
+#gem 'rails4-autocomplete'
 #gem 'rails', '4.2'
  gem 'bootstrap-sass'
  gem 'autoprefixer-rails'

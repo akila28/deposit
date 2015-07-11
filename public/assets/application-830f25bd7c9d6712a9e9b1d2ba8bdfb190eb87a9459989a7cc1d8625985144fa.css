@@ -15097,38 +15097,38 @@ button.close {
   }
 }
 /* universal */
-/* line 7, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 7, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 html {
   overflow-y: scroll;
 }
 
-/* line 11, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 11, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 body {
   padding-top: 60px;
 }
 
-/* line 15, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 15, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 section {
   overflow: auto;
 }
 
-/* line 19, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 19, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 23, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 23, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 .center {
   text-align: center;
 }
 
-/* line 27, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 27, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 .center h1 {
   margin-bottom: 10px;
 }
 
 /* header */
-/* line 34, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 34, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 #logo {
   float: left;
   margin-right: 10px;
@@ -15141,14 +15141,14 @@ textarea {
   line-height: 1;
 }
 
-/* line 46, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 46, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 #logo:hover {
   color: #fff;
   text-decoration: none;
 }
 
 /* footer */
-/* line 53, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 53, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 footer {
   margin-top: 300px;
   padding-top: 5px;
@@ -15156,53 +15156,53 @@ footer {
   color: #999;
 }
 
-/* line 60, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 60, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555;
 }
 
-/* line 64, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 64, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222;
 }
 
-/* line 68, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 68, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
 
-/* line 72, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 72, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
 
-/* line 77, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 77, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* table */
-/* line 84, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 84, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 th {
   border: 1px solid #C0C0C0;
   color: #000000;
 }
 
-/* line 89, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 89, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 td {
   border: 1px solid #C0C0C0;
 }
 
 /* customer line */
-/* line 95, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 95, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 .customer {
   border-bottom: 2.5px solid #0088cc;
 }
 
 /* homepage*/
-/* line 101, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 101, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 h5, h4, h3, h2, h1 {
   font-family: info;
   font-weight: bold;
@@ -15211,50 +15211,23 @@ h5, h4, h3, h2, h1 {
 }
 
 /* h1 */
-/* line 111, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 111, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 h1 {
   color: #228B22;
 }
 
 /* h4 */
-/* line 118, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 118, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 h4 {
   color: #FF1493;
 }
 
 /* label */
-/* line 125, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
+/* line 125, /home/tbf/rails_projects/rbf_proj signout not working/app/assets/stylesheets/custom.css.scss */
 label.required:after {
   content: " *";
   color: red;
   cursor: help;
-}
-
-/* User sign in and sign up forms. */
-/* line 133, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
-.border-form-div {
-  max-width: 700px;
-  padding: 29px 35px 35px;
-  margin: 0 auto 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* line 145, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
-.border-form-div .form-signin-heading,
-.border-form-div .checkbox {
-  margin-bottom: 10px;
-}
-
-/* line 149, /home/tbf/rails_projects/rbf_proj/app/assets/stylesheets/custom.css.scss */
-.border-form-div input[type="text"],
-.border-form-div input[type="email"],
-.border-form-div input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
