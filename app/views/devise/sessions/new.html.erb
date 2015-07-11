@@ -13,24 +13,24 @@
 
   <%= f.label :EMAIL %>
   <%= f.email_field :email, :autofocus => true %>  
-<br /> 
+<br /> <br />
 
   <%= f.label :PASSWORD %>
   <%= f.password_field :password %>  
-<br /> 
+<br /> <br />
 
   <%= f.label :ROLE %>
   <%= f.select :role, options_for_select([["Manager", "manager"], ["Deo",  "deo"]]), { :include_blank => true } %>  
-<br /><br />
+<br /><br /><br />
  
   <% if devise_mapping.rememberable? -%>
     <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-  <% end -%>
+  <% end -%><br />
 
   <fieldset class="form-actions">
     <button class="btn btn-info" type="submit" name="button">Sign in</button>
    </fieldset>
-<% end %>
+<% end %></br>
 
 </div>
 </div>
