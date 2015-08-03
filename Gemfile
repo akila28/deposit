@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
-#ruby '2.0'
 #gem 'rails4-autocomplete'
-#gem 'rails', '4.2'
  gem 'bootstrap-sass'
  gem 'autoprefixer-rails'
  gem 'jquery-rails'
@@ -24,18 +22,15 @@ source 'http://rubygems.org'
  gem "ransack", :git => "git://github.com/ernie/ransack.git", :branch => 'rails-4'
  gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
  gem 'bootstrap-sass-extras' 
+ gem 'sass-rails'
+ gem 'coffee-rails'
+ gem 'uglifier'
 
 group :development do
  gem 'sqlite3'
  gem 'rspec-rails'
  gem 'binding_of_caller'
 end
-
-#group :assets do
- gem 'sass-rails'
- gem 'coffee-rails'
- gem 'uglifier'
-#end
 
 group :development do
  gem 'annotate'
